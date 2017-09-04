@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  postgresql:
+    image: postgres
+    container_name: wiki_postgres:latest
+    ports:
+      - '5434:5432'
+    environment:
+      - 'POSTGRES_USER=openkunlun'
+      - 'POSTGRES_PASSWORD=#a1a4*6DK'
+      - 'POSTGRES_DB=kunlunatlassian'
+      - 'POSTGRES_ENCODING=UTF8'
+      - 'POSTGRES_COLLATE=C'
+      - 'POSTGRES_COLLATE_TYPE=C'
+    volumes:
+      - /root/docker-volume/wiki_postgres/data/:/var/lib/postgresql/data/
