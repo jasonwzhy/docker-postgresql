@@ -2,8 +2,8 @@ version: '2'
 
 services:
   postgresql:
-    image: postgres
-    container_name: wiki_postgres:latest
+    image: postgres:latest
+    container_name: wiki_postgres
     ports:
       - '5434:5432'
     environment:
